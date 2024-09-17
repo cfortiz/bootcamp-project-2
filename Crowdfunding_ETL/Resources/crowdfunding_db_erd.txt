@@ -1,0 +1,35 @@
+# For https://app.quickdatabasediagrams.com
+
+campaign
+--------
+cf_id PK int
+contact_id int
+company_name varchar(100)
+description text
+goal numeric(10,2)
+pledged numeric(10,2)
+outcome varchar(10)
+backers_count int
+country char(2)
+currency char(3)
+launch_date date
+end_date date
+category_id varchar(10) FK >- category.category_id
+subcategory_id varchar(10) FK >- subcategory.subcategory_id
+
+category
+--------
+category_id varchar(13) PK
+category_name varchar(30)
+
+subcategory
+-----------
+subcategory_id varchar(10) PK
+subcategory_name varchar(30)
+
+contacts
+--------
+contact_id int PK
+first_name varchar(100)
+last_name varchar(100)
+email varchar(100)
