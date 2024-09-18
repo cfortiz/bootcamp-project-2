@@ -3,7 +3,7 @@
 campaign
 --------
 cf_id PK int
-contact_id int
+contact_id int FK >- contacts.contact_id
 company_name varchar(100)
 description text
 goal numeric(10,2)
